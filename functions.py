@@ -14,10 +14,10 @@ def split_csv():
     with open(inputfile) as finput:
         for line in finput:
             if main_keyword in line:
-                output = open("output.csv", 'a')
+                output = open(main_keyword + "output.csv", 'a')
                 output.write(line)
             elif secondary_keyword in line:
-                output = open("output.csv", 'a')
+                output = open(secondary_keyword + "output.csv", 'a')
                 output.write(line)
             elif "TEL PED" in line:
                 peds = open("output_peds.csv", 'a')
